@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "2026.1",
+  "updatedAt": "2026-02-01T09:00:00Z",
+  "schools": [
+    {
+      "id": "uoft",
+      "name": "University of Toronto",
+      "descriptor": "Canada's largest research university",
+      "location": "Toronto, ON, Canada",
+      "logo": "🎓",
+      "worldRankings": [
+        {"system": "QS", "year": 2025, "rank": 25, "source": "https://www.topuniversities.com", "lastVerified": "2026-01-20"},
+        {"system": "THE", "year": 2025, "rank": 21, "source": "https://www.timeshighereducation.com", "lastVerified": "2026-01-20"}
+      ],
+      "acceptanceRate": {"value": "43%", "coverage": "estimated", "source": "https://www.utoronto.ca", "lastVerified": "2026-01-11", "note": "Publicly reported ranges vary by faculty."}
+    },
+    {
+      "id": "uwaterloo",
+      "name": "University of Waterloo",
+      "descriptor": "Top Canadian co-op powerhouse",
+      "location": "Waterloo, ON, Canada",
+      "logo": "💧",
+      "worldRankings": [
+        {"system": "QS", "year": 2025, "rank": 112, "source": "https://www.topuniversities.com", "lastVerified": "2026-01-20"},
+        {"system": "ARWU", "year": 2025, "rank": "151-200", "source": "https://www.shanghairanking.com", "lastVerified": "2026-01-20"}
+      ],
+      "acceptanceRate": {"value": "53%", "coverage": "reported", "source": "https://uwaterloo.ca/about", "lastVerified": "2026-01-12", "note": "Institution-level rate only."}
+    },
+    {
+      "id": "seneca",
+      "name": "Seneca Polytechnic",
+      "descriptor": "Career-focused diplomas and applied degrees",
+      "location": "Toronto, ON, Canada",
+      "logo": "🏫",
+      "worldRankings": [],
+      "acceptanceRate": {"value": "Not published", "coverage": "unavailable", "source": "https://www.senecapolytechnic.ca", "lastVerified": "2026-01-15", "note": "Polytechnic institutions often do not publish acceptance rates."}
+    }
+  ],
+  "programs": [
+    {
+      "id": "uoft-cs-bsc",
+      "name": "Computer Science",
+      "schoolId": "uoft",
+      "credential": "BSc",
+      "faculty": "Faculty of Arts & Science",
+      "campus": "St. George",
+      "coOp": "Optional PEY",
+      "specializations": ["AI Focus", "Data Science Stream"],
+      "descriptor": "Theory + practical software design",
+      "admission": {
+        "prerequisites": [
+          {"course": "English", "code": "ENG4U", "minimum": 75},
+          {"course": "Advanced Functions", "code": "MHF4U", "minimum": 78},
+          {"course": "Calculus and Vectors", "code": "MCV4U", "minimum": 78}
+        ],
+        "overallMinimum": 84,
+        "competitiveAverage": {"cycle": "2024-2025", "value": 92, "source": "https://www.artsci.utoronto.ca/future", "lastVerified": "2026-01-22"},
+        "programAcceptance": {"value": "18%", "coverage": "estimated", "source": "https://www.artsci.utoronto.ca/future", "lastVerified": "2026-01-22"},
+        "programRanking": {"system": "QS Subject: Computer Science", "year": 2025, "rank": 13, "source": "https://www.topuniversities.com", "lastVerified": "2026-01-20"}
+      }
+    },
+    {
+      "id": "uwaterloo-se-bse",
+      "name": "Software Engineering",
+      "schoolId": "uwaterloo",
+      "credential": "BSE",
+      "faculty": "Faculty of Engineering",
+      "campus": "Main Campus",
+      "coOp": "Required",
+      "specializations": ["Embedded", "Systems", "AI"],
+      "descriptor": "Elite co-op engineering program",
+      "admission": {
+        "prerequisites": [
+          {"course": "English", "code": "ENG4U", "minimum": 80},
+          {"course": "Advanced Functions", "code": "MHF4U", "minimum": 85},
+          {"course": "Calculus and Vectors", "code": "MCV4U", "minimum": 85},
+          {"course": "Chemistry", "code": "SCH4U", "minimum": 75},
+          {"course": "Physics", "code": "SPH4U", "minimum": 80}
+        ],
+        "overallMinimum": 88,
+        "competitiveAverage": {"cycle": "2024-2025", "value": 95, "source": "https://uwaterloo.ca/future-students/programs/software-engineering", "lastVerified": "2026-01-21"},
+        "programAcceptance": {"value": "11%", "coverage": "reported", "source": "https://uwaterloo.ca/engineering", "lastVerified": "2026-01-21"},
+        "programRanking": {"system": "THE Engineering", "year": 2025, "rank": 45, "source": "https://www.timeshighereducation.com", "lastVerified": "2026-01-20"}
+      }
+    },
+    {
+      "id": "seneca-cpa-diploma",
+      "name": "Computer Programming & Analysis",
+      "schoolId": "seneca",
+      "credential": "Advanced Diploma",
+      "faculty": "School of Software Design & Data Science",
+      "campus": "Newnham",
+      "coOp": "Optional",
+      "specializations": ["Full-Stack", "Cloud"],
+      "descriptor": "Industry-oriented programming diploma",
+      "admission": {
+        "prerequisites": [
+          {"course": "English", "code": "ENG4C/ENG4U", "minimum": 65},
+          {"course": "Mathematics", "code": "MAP4C/MHF4U", "minimum": 60}
+        ],
+        "overallMinimum": 70,
+        "competitiveAverage": {"cycle": "2024-2025", "value": null, "source": "https://www.senecapolytechnic.ca/programs/fulltime/CPA.html", "lastVerified": "2026-01-20"},
+        "programAcceptance": {"value": "Not published", "coverage": "unavailable", "source": "https://www.senecapolytechnic.ca", "lastVerified": "2026-01-20"},
+        "programRanking": null
+      }
+    }
+  ],
+  "gradeCourses": [
+    {"code": "ENG4U", "name": "English"},
+    {"code": "MHF4U", "name": "Advanced Functions"},
+    {"code": "MCV4U", "name": "Calculus and Vectors"},
+    {"code": "SPH4U", "name": "Physics"},
+    {"code": "SCH4U", "name": "Chemistry"},
+    {"code": "ICS4U", "name": "Computer Science"},
+    {"code": "MAP4C", "name": "Foundations for College Mathematics"}
+  ]
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admission Navigator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Admission Navigator</h1>
+    <button id="explicit-search" aria-label="Fetch program details">Search</button>
+  </header>
+
+  <main class="container">
+    <section class="search-panel card">
+      <div class="search-grid">
+        <div class="search-box" id="school-box">
+          <label for="school-input">School</label>
+          <input id="school-input" autocomplete="off" aria-autocomplete="list" aria-expanded="false" aria-controls="school-list" placeholder="Search university or college" />
+          <ul id="school-list" class="suggestions" role="listbox"></ul>
+        </div>
+        <div class="search-box" id="program-box">
+          <label for="program-input">Program</label>
+          <input id="program-input" autocomplete="off" aria-autocomplete="list" aria-expanded="false" aria-controls="program-list" placeholder="Search degree, diploma, certificate" />
+          <ul id="program-list" class="suggestions" role="listbox"></ul>
+        </div>
+      </div>
+      <div id="did-you-mean" class="muted"></div>
+      <div class="filters">
+        <select id="filter-credential" aria-label="Filter by credential"><option value="">Credential</option><option>BSc</option><option>BA</option><option>BSE</option><option>Advanced Diploma</option></select>
+        <select id="filter-coop" aria-label="Filter by co-op"><option value="">Co-op</option><option>Required</option><option>Optional</option><option>Optional PEY</option></select>
+      </div>
+    </section>
+
+    <section id="snapshot" class="card skeleton"></section>
+
+    <section class="card">
+      <h2>My Grades</h2>
+      <div class="grade-controls">
+        <select id="jurisdiction"><option>Ontario, Canada</option><option>British Columbia, Canada</option><option>Alberta, Canada</option></select>
+        <button id="add-course">Add Course</button>
+        <button id="save-profile">Save Profile</button>
+      </div>
+      <div id="courses"></div>
+      <details>
+        <summary>Calculation breakdown</summary>
+        <div id="breakdown"></div>
+      </details>
+      <label for="risk">Personal risk tolerance</label>
+      <input type="range" id="risk" min="0" max="100" value="50" />
+      <div id="fit-card" class="fit"></div>
+    </section>
+  </main>
+
+  <div id="banner" class="banner hidden">Showing cached data—some details may be outdated.</div>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
