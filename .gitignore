@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+.veridex_audit.db
+veridex_audit.db

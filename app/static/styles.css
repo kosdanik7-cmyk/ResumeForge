@@ -1,0 +1,109 @@
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --text: #1d232f;
+  --muted: #586174;
+  --accent: #1f3f73;
+  --border: #d9dee8;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+.shell {
+  width: min(980px, 92vw);
+  margin: 0 auto;
+  padding: 8vh 0 5vh;
+}
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+h1 {
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.05em;
+}
+.hero p { color: var(--muted); }
+form {
+  margin: 2.2rem auto 1rem;
+  max-width: 760px;
+  display: grid;
+  gap: 0.8rem;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 1.06rem;
+  background: var(--surface);
+}
+button {
+  justify-self: center;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.3rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.status {
+  font-size: 0.9rem;
+  color: var(--accent);
+  min-height: 1.2rem;
+}
+.results {
+  display: grid;
+  gap: 1rem;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+}
+.verdict-card {
+  display: flex;
+  justify-content: space-between;
+}
+.label {
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.82rem;
+}
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.sources { display: grid; gap: 0.8rem; }
+.source {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.85rem;
+}
+.source h4 { margin: 0 0 0.4rem; font-size: 1rem; }
+.source .meta { color: var(--muted); font-size: 0.86rem; }
+blockquote {
+  margin: 0.6rem 0;
+  padding: 0.6rem 0.8rem;
+  border-left: 3px solid var(--accent);
+  background: #f0f4fb;
+}
+details summary { cursor: pointer; color: var(--accent); }
+.hidden { display: none; }
+.toggle { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--muted); }

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veridex — Evidence Evaluation Engine</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <h1>Veridex</h1>
+        <p>Evidence-first claim evaluation. Transparent by design.</p>
+        <form id="claim-form">
+          <input id="claim-input" name="claim" type="text" placeholder="Enter a factual claim or question" required />
+          <button type="submit">Evaluate Claim</button>
+        </form>
+        <div id="status" class="status hidden"></div>
+      </section>
+
+      <section id="results" class="results hidden">
+        <div class="card verdict-card">
+          <div>
+            <p class="label">Verdict</p>
+            <h2 id="verdict-label">—</h2>
+          </div>
+          <div>
+            <p class="label">Confidence</p>
+            <p id="confidence">—</p>
+          </div>
+        </div>
+
+        <article class="card">
+          <p class="label">Concise Answer</p>
+          <p id="answer"></p>
+        </article>
+
+        <article class="card">
+          <p class="label">Structured Claim</p>
+          <pre id="structured"></pre>
+        </article>
+
+        <article class="card overview-grid">
+          <div><p class="label">Supporting Strength</p><p id="support-score">0</p></div>
+          <div><p class="label">Contradicting Strength</p><p id="contradict-score">0</p></div>
+          <div><p class="label">Mixed Strength</p><p id="mixed-score">0</p></div>
+        </article>
+
+        <article class="card">
+          <div class="section-header"><p class="label">Sources Used</p></div>
+          <div id="sources-used" class="sources"></div>
+        </article>
+
+        <article class="card">
+          <label class="toggle">
+            <input type="checkbox" id="excluded-toggle" />
+            Sources Retrieved but Not Used
+          </label>
+          <div id="sources-excluded" class="sources hidden"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
