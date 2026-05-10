@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "Blackline Table Hub",
+    "slug": "blackline-table-hub",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#000000"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#000000"
+      }
+    }
+  }
+}
